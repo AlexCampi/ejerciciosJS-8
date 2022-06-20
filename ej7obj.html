@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleej7.css">
+    <title>Ejercicio 7 Objetos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="container__card" id="containerPlanet1">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="container__card" id="containerPlanet2">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="container__card" id="containerPlanet3">
+            </div>
+        </div>
+    </div>
+    <script>
+        let sistemaSolar = {
+  mercurio: {
+    nombre: "mercurio",
+    color: "gris",
+    temperatura: 350,
+    imagen: "https://www.astromia.com/fotosolar/fotos/planetamercurio.jpg",
+  },
+  venus: {
+    nombre: "venus",
+    color: "blanco",
+    temperatura: 460,
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Venus-real_color.jpg/220px-Venus-real_color.jpg",
+  },
+  tierra: {
+    nombre: "tierra",
+    color: "morado",
+    temperatura: 14,
+    imagen:
+      "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/5a0ab2a75bafe87f4d3f9a63/acaba-tiempo_0.jpg",
+  },
+  marte: {
+    nombre: "marte",
+    color: "rojo",
+    temperatura: -46,
+    imagen:
+      "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/55365b6b34099b0279c8fb2e/slide-marte.jpg",
+  },
+  jupiter: {
+    nombre: "jupiter",
+    color: "marrón",
+    temperatura: -121,
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jupiter_by_Cassini-Huygens.jpg/280px-Jupiter_by_Cassini-Huygens.jpg",
+  },
+  saturno: {
+    nombre: "saturno",
+    color: "amarillo",
+    temperatura: -130,
+    imagen:
+      "https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/558d2b15010e26221b57df75/saturno.jpg",
+  },
+  urano: {
+    nombre: "urano",
+    color: "azul",
+    temperatura: -205,
+    imagen: "http://www.manzanares.es/v2/sites/paseo/img/urano/urano1.jpg",
+  },
+  neptuno: {
+    nombre: "neptuno",
+    color: "azul",
+    temperatura: -220,
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/280px-Neptune_Full.jpg",
+  },
+  pluton: {
+    nombre: "plutón",
+    color: "blanco",
+    temperatura: -229,
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Nh-pluto-in-true-color_2x_JPEG.jpg/1200px-Nh-pluto-in-true-color_2x_JPEG.jpg",
+  },
+};
+        let planet1 = (window.prompt("Dime un planeta")).toLowerCase()
+        let planet2 = (window.prompt("Dime otro planeta")).toLowerCase()
+        let planet3 = (window.prompt("Dime un planeta más")).toLowerCase()
+
+        //COMIENZA PLANETA 1
+        if(planet1===sistemaSolar.mercurio.nombre){
+           document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.mercurio.nombre}</h4>
+                    <img src=${sistemaSolar.mercurio.imagen} alt="Mercurio" style="width:100%">
+                    <p>Color: ${sistemaSolar.mercurio.color}</p>
+                    <p>Temperatura: ${sistemaSolar.mercurio.temperatura}</p>`
+        } else if(planet1===sistemaSolar.venus.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.venus.nombre}</h4>
+                    <img src=${sistemaSolar.venus.imagen} alt="Venus" style="width:100%">
+                    <p>Color: ${sistemaSolar.venus.color}</p>
+                    <p>Temperatura: ${sistemaSolar.venus.temperatura}</p>`
+        } else if(planet1===sistemaSolar.tierra.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.tierra.nombre}</h4>
+                    <img src=${sistemaSolar.tierra.imagen} alt="Tierra" style="width:100%">
+                    <p>Color: ${sistemaSolar.tierra.color}</p>
+                    <p>Temperatura: ${sistemaSolar.tierra.temperatura}</p>`
+        } else if(planet1===sistemaSolar.marte.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.marte.nombre}</h4>
+                    <img src=${sistemaSolar.marte.imagen} alt="Marte" style="width:100%">
+                    <p>Color: ${sistemaSolar.marte.color}</p>
+                    <p>Temperatura: ${sistemaSolar.marte.temperatura}</p>`
+        } else if(planet1===sistemaSolar.jupiter.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.jupiter.nombre}</h4>
+                    <img src=${sistemaSolar.jupiter.imagen} alt="Jupiter" style="width:100%">
+                    <p>Color: ${sistemaSolar.jupiter.color}</p>
+                    <p>Temperatura: ${sistemaSolar.jupiter.temperatura}</p>`
+        } else if(planet1===sistemaSolar.saturno.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.saturno.nombre}</h4>
+                    <img src=${sistemaSolar.saturno.imagen} alt="Saturno" style="width:100%">
+                    <p>Color: ${sistemaSolar.saturno.color}</p>
+                    <p>Temperatura: ${sistemaSolar.saturno.temperatura}</p>`
+        } else if(planet1===sistemaSolar.urano.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.urano.nombre}</h4>
+                    <img src=${sistemaSolar.urano.imagen} alt="Urano" style="width:100%">
+                    <p>Color: ${sistemaSolar.urano.color}</p>
+                    <p>Temperatura: ${sistemaSolar.urano.temperatura}</p>`
+        } else if(planet1===sistemaSolar.neptuno.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.neptuno.nombre}</h4>
+                    <img src=${sistemaSolar.neptuno.imagen} alt="Neptuno" style="width:100%">
+                    <p>Color: ${sistemaSolar.neptuno.color}</p>
+                    <p>Temperatura: ${sistemaSolar.neptuno.temperatura}</p>`
+        } else if(planet1===sistemaSolar.pluton.nombre){
+            document.getElementById("containerPlanet1").innerHTML = `
+                    <h4>${sistemaSolar.pluton.nombre}</h4>
+                    <img src=${sistemaSolar.pluton.imagen} alt="Pluton" style="width:100%">
+                    <p>Color: ${sistemaSolar.pluton.color}</p>
+                    <p>Temperatura: ${sistemaSolar.pluton.temperatura}</p>`
+        } else{
+            document.getElementById("containerPlanet1").innerHTML = `
+                <p>Por favor introduce un planeta válido</p>`
+        }
+
+        //COMIENZA PLANETA 2
+        if(planet2!==planet1 && planet2!==planet3){
+            if(planet2===sistemaSolar.mercurio.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.mercurio.nombre}</h4>
+                        <img src=${sistemaSolar.mercurio.imagen} alt="Mercurio" style="width:100%">
+                        <p>Color: ${sistemaSolar.mercurio.color}</p>
+                        <p>Temperatura: ${sistemaSolar.mercurio.temperatura}</p>`
+            } else if(planet2===sistemaSolar.venus.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.venus.nombre}</h4>
+                        <img src=${sistemaSolar.venus.imagen} alt="Venus" style="width:100%">
+                        <p>Color: ${sistemaSolar.venus.color}</p>
+                        <p>Temperatura: ${sistemaSolar.venus.temperatura}</p>`
+            } else if(planet2===sistemaSolar.tierra.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.tierra.nombre}</h4>
+                        <img src=${sistemaSolar.tierra.imagen} alt="Tierra" style="width:100%">
+                        <p>Color: ${sistemaSolar.tierra.color}</p>
+                        <p>Temperatura: ${sistemaSolar.tierra.temperatura}</p>`
+            } else if(planet2===sistemaSolar.marte.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.marte.nombre}</h4>
+                        <img src=${sistemaSolar.marte.imagen} alt="Marte" style="width:100%">
+                        <p>Color: ${sistemaSolar.marte.color}</p>
+                        <p>Temperatura: ${sistemaSolar.marte.temperatura}</p>`
+            } else if(planet2===sistemaSolar.jupiter.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.jupiter.nombre}</h4>
+                        <img src=${sistemaSolar.jupiter.imagen} alt="Jupiter" style="width:100%">
+                        <p>Color: ${sistemaSolar.jupiter.color}</p>
+                        <p>Temperatura: ${sistemaSolar.jupiter.temperatura}</p>`
+            } else if(planet2===sistemaSolar.saturno.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.saturno.nombre}</h4>
+                        <img src=${sistemaSolar.saturno.imagen} alt="Saturno" style="width:100%">
+                        <p>Color: ${sistemaSolar.saturno.color}</p>
+                        <p>Temperatura: ${sistemaSolar.saturno.temperatura}</p>`
+            } else if(planet2===sistemaSolar.urano.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.urano.nombre}</h4>
+                        <img src=${sistemaSolar.urano.imagen} alt="Urano" style="width:100%">
+                        <p>Color: ${sistemaSolar.urano.color}</p>
+                        <p>Temperatura: ${sistemaSolar.urano.temperatura}</p>`
+            } else if(planet2===sistemaSolar.neptuno.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.neptuno.nombre}</h4>
+                        <img src=${sistemaSolar.neptuno.imagen} alt="Neptuno" style="width:100%">
+                        <p>Color: ${sistemaSolar.neptuno.color}</p>
+                        <p>Temperatura: ${sistemaSolar.neptuno.temperatura}</p>`
+            } else if(planet2===sistemaSolar.pluton.nombre){
+                document.getElementById("containerPlanet2").innerHTML = `
+                        <h4>${sistemaSolar.pluton.nombre}</h4>
+                        <img src=${sistemaSolar.pluton.imagen} alt="Pluton" style="width:100%">
+                        <p>Color: ${sistemaSolar.pluton.color}</p>
+                        <p>Temperatura: ${sistemaSolar.pluton.temperatura}</p>`
+            } else{
+                document.getElementById("containerPlanet2").innerHTML = `
+                    <p>Por favor introduce un planeta válido</p>`
+            }
+        } else{
+            document.getElementById("containerPlanet2").innerHTML = `
+                <p>Los planetas no se pueden repetir</p>`
+        }
+
+        //COMIENZA PLANETA 3
+        if(planet3!==planet1 && planet3!==planet2){
+            if(planet3===sistemaSolar.mercurio.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.mercurio.nombre}</h4>
+                        <img src=${sistemaSolar.mercurio.imagen} alt="Mercurio" style="width:100%">
+                        <p>Color: ${sistemaSolar.mercurio.color}</p>
+                        <p>Temperatura: ${sistemaSolar.mercurio.temperatura}</p>`
+            } else if(planet3===sistemaSolar.venus.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.venus.nombre}</h4>
+                        <img src=${sistemaSolar.venus.imagen} alt="Venus" style="width:100%">
+                        <p>Color: ${sistemaSolar.venus.color}</p>
+                        <p>Temperatura: ${sistemaSolar.venus.temperatura}</p>`
+            } else if(planet3===sistemaSolar.tierra.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.tierra.nombre}</h4>
+                        <img src=${sistemaSolar.tierra.imagen} alt="Tierra" style="width:100%">
+                        <p>Color: ${sistemaSolar.tierra.color}</p>
+                        <p>Temperatura: ${sistemaSolar.tierra.temperatura}</p>`
+            } else if(planet3===sistemaSolar.marte.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.marte.nombre}</h4>
+                        <img src=${sistemaSolar.marte.imagen} alt="Marte" style="width:100%">
+                        <p>Color: ${sistemaSolar.marte.color}</p>
+                        <p>Temperatura: ${sistemaSolar.marte.temperatura}</p>`
+            } else if(planet3===sistemaSolar.jupiter.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.jupiter.nombre}</h4>
+                        <img src=${sistemaSolar.jupiter.imagen} alt="Jupiter" style="width:100%">
+                        <p>Color: ${sistemaSolar.jupiter.color}</p>
+                        <p>Temperatura: ${sistemaSolar.jupiter.temperatura}</p>`
+            } else if(planet3===sistemaSolar.saturno.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.saturno.nombre}</h4>
+                        <img src=${sistemaSolar.saturno.imagen} alt="Saturno" style="width:100%">
+                        <p>Color: ${sistemaSolar.saturno.color}</p>
+                        <p>Temperatura: ${sistemaSolar.saturno.temperatura}</p>`
+            } else if(planet3===sistemaSolar.urano.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.urano.nombre}</h4>
+                        <img src=${sistemaSolar.urano.imagen} alt="Urano" style="width:100%">
+                        <p>Color: ${sistemaSolar.urano.color}</p>
+                        <p>Temperatura: ${sistemaSolar.urano.temperatura}</p>`
+            } else if(planet3===sistemaSolar.neptuno.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.neptuno.nombre}</h4>
+                        <img src=${sistemaSolar.neptuno.imagen} alt="Neptuno" style="width:100%">
+                        <p>Color: ${sistemaSolar.neptuno.color}</p>
+                        <p>Temperatura: ${sistemaSolar.neptuno.temperatura}</p>`
+            } else if(planet3===sistemaSolar.pluton.nombre){
+                document.getElementById("containerPlanet3").innerHTML = `
+                        <h4>${sistemaSolar.pluton.nombre}</h4>
+                        <img src=${sistemaSolar.pluton.imagen} alt="Pluton" style="width:100%">
+                        <p>Color: ${sistemaSolar.pluton.color}</p>
+                        <p>Temperatura: ${sistemaSolar.pluton.temperatura}</p>`
+            } else{
+                document.getElementById("containerPlanet3").innerHTML = `
+                    <p>Por favor introduce un planeta válido</p>`
+            }
+        } else{
+            document.getElementById("containerPlanet3").innerHTML = `
+                <p>Los planetas no se pueden repetir</p>`
+        }
+    </script>    
+</body>
+</html>

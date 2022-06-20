@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <script>
+        let newHeader = document.createElement('header')
+        newHeader.innerHTML = `
+        <header id="header">
+            <nav >
+                <a href="#noticia1">Noticia 1</a>
+                <a href="#noticia2">Noticia 2</a>
+                <a href="#noticia3">Noticia 3</a>
+            </nav>
+        </header>`
+        document.body.appendChild(newHeader)
+
+        let newMain = document.createElement('main')
+        newMain.innerHTML = `
+        <main>
+            <div id="noticia1">
+                <p>El homicida prófugo va armado y no coge el móvil</p>
+            </div>
+            <div id="noticia2">
+                <p>Discute en un bar, se va, vuelve vestido de buzo y dispara con un arpón</p>
+            </div>
+            <div id="noticia3">
+                <p>Un jabalí sale del mar en Alicante y muerde a una bañista de Cuenca</p>
+            </div>
+        </main>`
+        document.body.appendChild(newMain)
+
+        let newFooter = document.createElement('footer')
+        newFooter.innerHTML = `
+        <footer>
+            <a href="#header">Ve al comienzo de la página</a>
+        </footer>`
+        document.body.appendChild(newFooter)
+    </script>
+</body>
+</html>

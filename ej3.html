@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <p id="paragraphIf"></p>
+    <p id="paragraphSwitch"></p>
+    <p id="paragraphTernario"></p>
+    <script>
+        let user = window.prompt("Dime tu nombre")
+        let edad = parseInt(window.prompt("Dime tu edad"))
+        if(edad<18){
+            document.getElementById("paragraphIf").innerHTML = `Hola ${user}, eres menor de edad.`
+        } else{
+            document.getElementById("paragraphIf").innerHTML = `Hola ${user}, eres mayor de edad.`
+        }
+
+        switch(edad){
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                document.getElementById("paragraphSwitch").innerHTML = `Hola ${user}, eres menor de edad.`
+                break
+            default:
+                document.getElementById("paragraphSwitch").innerHTML = `Hola ${user}, eres mayor de edad.`
+        }
+
+        edad<18
+        ? document.getElementById("paragraphTernario").innerHTML = `Hola ${user}, eres menor de edad.`
+        : document.getElementById("paragraphTernario").innerHTML = `Hola ${user}, eres mayor de edad.`
+    </script>
+</body>
+</html>

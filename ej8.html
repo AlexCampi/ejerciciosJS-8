@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <script>
+        let edad = parseInt(window.prompt("Dime tu edad"))
+        let newParagraph = document.createElement('paragraph')
+        if(edad>18){
+            let carnet = (window.prompt("¿Tienes carnet de conducir?")).toLowerCase()
+            if(carnet==="si" || carnet==="sí"){
+                let nombre = window.prompt("Dime tu nombre")
+                let apellido = window.prompt("Dime tu apellido")
+                let ciudad = window.prompt("Dime la ciudad de recogida")
+                let duracion = parseInt(window.prompt("¿Cuántos días quieres alquilar el coche?"))
+                newParagraph.innerHTML = `${nombre} ${apellido} podrás recoger el coche en ${ciudad} y tu alquiler tendrá un coste de ${duracion>7 ?parseInt(duracion/7)*150+(duracion%7)*25 :duracion*25}€`
+            } else{
+                newParagraph.innerHTML = "<p>No puedes alquilar el coche porque no tienes carnet de conducir.</p>"
+            }
+        } else{
+            newParagraph.innerHTML = "<p>No puedes alquilar el coche porque eres menor de edad.</p>"
+        }
+        document.body.appendChild(newParagraph)
+    </script>
+</body>
+</html>

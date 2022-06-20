@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Objetos</title>
+</head>
+<body>
+    <div id="contenedorNum"></div>
+    <script>
+        let num = parseInt(window.prompt("Dime un número"))
+        if(num<100){
+            document.getElementById('contenedorNum').innerHTML = `<p style="color: green;">El número es ${num}</p>`
+        } else if(num>=100 && num<=200){
+            document.getElementById('contenedorNum').innerHTML = `<p style="color: yellow;">El número es ${num}</p>`
+        } else if(num>200){
+            document.getElementById('contenedorNum').innerHTML = `<p style="color: red;">El número es ${num}`
+        }
+    </script>
+</body>
+</html>
